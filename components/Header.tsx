@@ -3,7 +3,7 @@
 import Image from "next/image";
 import Logo from "../public/logo.png";
 import Link from "next/link";
-import {  MenuIcon, PhoneIcon } from "lucide-react";
+import { MenuIcon, PhoneIcon } from "lucide-react";
 
 import {
   Sheet,
@@ -14,9 +14,8 @@ import {
 } from "@/components/ui/sheet";
 
 import { motion } from "framer-motion";
-import {  useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { navList } from "@/constants/index";
-
 
 const mobTitleStyles = "text-lg py-2";
 
@@ -31,7 +30,6 @@ const MobileMenu = () => (
         <SheetContent>
           <ul>
             {navList.map((item, index) => {
-
               return (
                 <Link key={index} href={item.link}>
                   <motion.li
@@ -53,7 +51,6 @@ const MobileMenu = () => (
 const DesktopNav = () => (
   <ul className="hidden gap-8 lg:flex  text-xl">
     {navList.map((item, index) => {
-
       return (
         <Link key={index} href={item.link}>
           <motion.li
@@ -100,7 +97,10 @@ export default function Header() {
             width={50}
             height={50}
             className="rounded-full"
-          / > <p className=" text-base font-bold flex flex-col">Zorica <span className="">Odavić</span></p>
+          />{" "}
+          <p className=" text-base font-bold flex flex-col">
+            Zorica <span className="">Odavić</span>
+          </p>
         </Link>
         <DesktopNav />
         <Link href="tel:+3816">
@@ -111,7 +111,7 @@ export default function Header() {
             }}
             className=" items-center justify-center rounded-full text-primary border-primary border-2 text-sm md:text-lg py-1 px-2 md:py-2 md:px-4 transition-colors flex"
           >
-            <PhoneIcon />
+            <PhoneIcon className="hidden md:block" />
             <p className="">+38160 000 000</p>
           </motion.button>
         </Link>
