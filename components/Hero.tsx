@@ -67,7 +67,7 @@ const Hero = ({
           >
             <Quote className="inline w-4 h-4 mr-2 text-primary mb-3" />
         {quote.text} <Quote className="inline w-4 h-4 mr-2 text-primary mb-3" /> - {quote.author} <br />
-            "{quote.text2}"
+            {quote.text2}
           </motion.blockquote>
 
           <motion.div
