@@ -8,7 +8,7 @@ import { Heart, Target } from "lucide-react";
 
 const RFGMethod = () => {
   return (
-    <section className="py-20 bg-white">
+    <section className="py-16 bg-white">
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto">
           <motion.h2
@@ -26,11 +26,11 @@ const RFGMethod = () => {
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8 }}
             >
-              <Card className="h-full">
+                    <Card className="h-full bg-gradient-to-br from-gray-400 to-gray-200">   
                 <CardContent className="p-8">
-                  <Heart className="w-12 h-12 text-primary mb-4" />
-                  <h3 className="text-xl font-semibold mb-4">Osnovni princip</h3>
-                  <p className="text-slate-600">
+                  
+                  <h3 className=" text-black font-semibold mb-4 flex items-center gap-6 justify-center"> <Heart className="w-10 h-10 text-primary " />Osnovni princip</h3>
+                  <p className="text-black">
                     Da pomognem što većem broju ljudi, da se za što kraće vreme oporave od tuge.
                   </p>
                 </CardContent>
@@ -42,11 +42,10 @@ const RFGMethod = () => {
               whileInView={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8 }}
             >
-              <Card className="h-full">
+              <Card className="h-full bg-gradient-to-br from-gray-400 to-gray-200 ">
                 <CardContent className="p-8">
-                  <Target className="w-12 h-12 text-primary mb-4" />
-                  <h3 className="text-xl font-semibold mb-4">Naš cilj</h3>
-                  <p className="text-slate-600">
+                  <h3 className=" text-black font-semibold mb-4 flex items-center gap-6 justify-center"> <Target className="w-10 h-10 text-primary" />Naš cilj</h3>
+                  <p className="text-black">
                     Sa ispravnim informacijama i ispravnim izborima čovek može da se oporavi od svakog velikog gubitka.
                   </p>
                 </CardContent>

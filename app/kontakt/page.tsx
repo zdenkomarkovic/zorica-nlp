@@ -59,8 +59,9 @@ const ContactPage = () => {
               {/* Kontakt informacije */}
               <motion.div
                 initial={{ opacity: 0, x: -30 }}
-                whileInView={{ opacity: 1, x: 0 }}
+                animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.8 }}
+                viewport={{ once: true }}
               >
                 <h2 className="text-3xl font-bold text-slate-800 mb-8">
                   Kontakt informacije
@@ -133,9 +134,10 @@ const ContactPage = () => {
               {/* Kontakt forma */}
               <motion.div
                 initial={{ opacity: 0, x: 30 }}
-                whileInView={{ opacity: 1, x: 0 }}
+                animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.8 }}
-              >
+                viewport={{ once: true }}
+              >              
                 <Card>
                   <CardContent className="p-8">
                     <h2 className="text-3xl font-bold text-slate-800 mb-6">

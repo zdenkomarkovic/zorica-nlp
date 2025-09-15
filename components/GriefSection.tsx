@@ -6,11 +6,11 @@ import Link from "next/link";
 
 const GriefSection = () => {
   return (
-    <section className="py-20 bg-slate-50">
+    <section className="py-16 bg-gradient-to-br from-gray-200 to-white">
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto">
           <motion.h2
-            className="text-3xl md:text-4xl font-bold text-center text-slate-800 mb-12"
+            className="text-3xl md:text-4xl font-bold text-center text-primary mb-12"
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
@@ -39,7 +39,7 @@ const GriefSection = () => {
               Tuga predstavlja sučeljena osećanja uzrokovana krajem ili promenom u poznatom 
               obrascu ponašanja.
             </p>
-            <p className="py-10 text-center text-2xl font-bold">
+            <p className="py-10 text-center text-2xl font-bold text-primary">
             Šta podrazumevamo pod sučeljenim osećanjima?
             </p>
          
@@ -48,12 +48,12 @@ const GriefSection = () => {
         <p className="mb-6 first-letter:pl-6">
         Šta je sa razvodom? Ima li i u njemu sučeljenih osećanja? Ima. Možete se osetiti istinski slobodno sad kada su bitke završene. To je pozitivno osećanje. Istovremeno se možete bojati da nikad „nećete naći nekog tako lepog ili tako dobrog hranitelja porodice“. Ta sučeljena osećanja, sloboda i strah, takođe su prirodne reakcije na gubitak.
         </p>  
-        <p className="py-10 text-center text-2xl font-bold">
+        <p className="py-10 text-center text-2xl font-bold text-primary">
             Koji još gubici mogu da uzrokuju tugu:
             </p>
        <motion.ul  initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }} className="list-disc list-inside pl-20">
+            transition={{ duration: 0.8, delay: 0.2 }} className="list-disc list-inside  pl-20">
         <li className="mb-3">Smrt kućnog ljubimca</li>
         <li className="mb-3">Preseljenje</li>
         <li className="mb-3 ">Polazak u školu</li>

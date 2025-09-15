@@ -64,7 +64,7 @@ const defaultTestimonials: Testimonial[] = [
 
 const Testimonials = ({ testimonials = defaultTestimonials, className = "" }: TestimonialsProps) => {
   return (
-    <section className={`py-20 bg-slate-50 ${className}`}>
+    <section className={`py-16 bg-gradient-to-br from-gray-200 to-white ${className}`}>
       <div className="container mx-auto px-4">
         <div className="max-w-6xl mx-auto">
           <motion.div
@@ -74,10 +74,10 @@ const Testimonials = ({ testimonials = defaultTestimonials, className = "" }: Te
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-3xl md:text-4xl font-bold text-slate-800 mb-4">
+            <h2 className="text-3xl md:text-4xl font-bold text-primary mb-4">
               Šta kažu naši klijenti
             </h2>
-            <p className="text-lg text-slate-600 max-w-2xl mx-auto">
+            <p className="text-lg text-black max-w-2xl mx-auto">
               Iskustva ljudi koji su kroz naše usluge pronašli put ka boljem životu
             </p>
           </motion.div>

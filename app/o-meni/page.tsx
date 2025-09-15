@@ -63,8 +63,9 @@ const AboutPage = () => {
             <motion.h2
               className="text-3xl font-bold text-center text-slate-800 mb-12"
               initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
+              animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
             >
               Osnovni podaci
             </motion.h2>
@@ -148,38 +149,7 @@ const AboutPage = () => {
       </section>
 
       {/* Usluge */}
-      <section className="py-20 bg-white">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto">
-            <motion.h2
-              className="text-3xl font-bold text-center text-slate-800 mb-12"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-            >
-              Područja u kojima vam mogu pomoći
-            </motion.h2>
 
-            <motion.div
-              className="grid md:grid-cols-2 gap-6"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
-            >
-              {services.map((service, index) => (
-                <Card key={index}>
-                  <CardContent className="p-6">
-                    <div className="flex items-center">
-                      <Target className="w-6 h-6 mr-3 text-primary" />
-                      <p className="text-lg">{service}</p>
-                    </div>
-                  </CardContent>
-                </Card>
-              ))}
-            </motion.div>
-          </div>
-        </div>
-      </section>
     </div>
   );
 };
