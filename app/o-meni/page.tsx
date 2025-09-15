@@ -3,7 +3,7 @@
 import { motion } from "framer-motion";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Mail, Phone, MapPin, Award, Users, Target } from "lucide-react";
+import { Mail,  Award, Users } from "lucide-react";
 
 const AboutPage = () => {
   const personalInfo = {

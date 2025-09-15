@@ -103,7 +103,7 @@ const Testimonials = ({ testimonials = defaultTestimonials, className = "" }: Te
                     </div>
                     
                     <p className="text-slate-600 mb-4 italic">
-                      "{testimonial.content}"
+                    &quot;{testimonial.content}&quot;
                     </p>
                     
                     <div className="border-t pt-4">
