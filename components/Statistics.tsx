@@ -3,11 +3,13 @@
 import { motion } from "framer-motion";
 import { Users, Heart, Award, Clock } from "lucide-react";
 
+  import { SVGProps } from "react";
+
 interface Statistic {
   id: number;
   number: string;
   label: string;
-  icon: React.ComponentType<any>;
+  icon: React.ComponentType<SVGProps<SVGSVGElement>>;
   description: string;
 }
 

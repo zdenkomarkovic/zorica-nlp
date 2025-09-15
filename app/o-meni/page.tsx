@@ -23,12 +23,6 @@ const AboutPage = () => {
     "Izrazita komunikativnost i orjentisanost klijentu"
   ];
 
-  const services = [
-    "Oporavak od tuge",
-    "Da pronađete smisao u životu", 
-    "Individualno terapijsko savetovanje",
-    "Partnersko savetovanje"
-  ];
 
   return (
     <div className="min-h-screen pt-20">
