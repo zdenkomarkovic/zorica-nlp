@@ -7,32 +7,40 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { Mail, Phone, MapPin, Clock, Send, CheckCircle } from "lucide-react";
+import Image from "@/node_modules/next/image";
 
 const ContactPage = () => {
   const contactInfo = {
     emails: ["odavic.zorica@gmail.com", "lekovitikoucing@gmail.com"],
     phone: "+381 60 000 000",
     location: "Lazarevac, Srbija",
-    workingHours: "Pon-Pet: 9:00-17:00, Sub: 9:00-13:00"
+    workingHours: "Pon-Pet: 9:00-17:00, Sub: 9:00-13:00",
   };
 
   const services = [
     "Oporavak od tuge",
-    "Logoterapija", 
+    "Logoterapija",
     "NLP koučing",
     "Individualno savetovanje",
     "Partnersko savetovanje",
-    "Medijacija"
+    "Medijacija",
   ];
 
   return (
-    <div className="min-h-screen pt-20">
+    <div className="min-h-screen">
       {/* Hero sekcija */}
-      <section className="py-20 bg-gradient-to-br from-slate-50 to-slate-100">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto text-center">
+      <section className=" relative h-[70dvh]">
+        <Image
+          src="/2150172139.jpg"
+          alt="Logoterapija"
+          fill
+          className="object-cover -z-10 [object-position:50%_80%]"
+        />
+        <div className="absolute inset-0 bg-black opacity-50 -z-10"></div>
+        <div className="container mx-auto px-4 h-full">
+          <div className="max-w-4xl mx-auto text-center flex flex-col justify-center items-center z-10 h-full">
             <motion.h1
-              className="text-4xl md:text-6xl font-bold text-slate-800 mb-6"
+              className="text-4xl md:text-6xl font-bold mt-32 text-primary mb-6"
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
@@ -40,7 +48,7 @@ const ContactPage = () => {
               Kontakt
             </motion.h1>
             <motion.p
-              className="text-xl text-slate-600"
+              className="text-xl text-white"
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
@@ -111,7 +119,9 @@ const ContactPage = () => {
                         <MapPin className="w-6 h-6 text-primary mr-4" />
                         <div>
                           <h3 className="font-semibold mb-2">Lokacija</h3>
-                          <p className="text-slate-600">{contactInfo.location}</p>
+                          <p className="text-slate-600">
+                            {contactInfo.location}
+                          </p>
                         </div>
                       </div>
                     </CardContent>
@@ -123,7 +133,9 @@ const ContactPage = () => {
                         <Clock className="w-6 h-6 text-primary mr-4" />
                         <div>
                           <h3 className="font-semibold mb-2">Radno vreme</h3>
-                          <p className="text-slate-600">{contactInfo.workingHours}</p>
+                          <p className="text-slate-600">
+                            {contactInfo.workingHours}
+                          </p>
                         </div>
                       </div>
                     </CardContent>
@@ -137,13 +149,13 @@ const ContactPage = () => {
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.8 }}
                 viewport={{ once: true }}
-              >              
+              >
                 <Card>
                   <CardContent className="p-8">
                     <h2 className="text-3xl font-bold text-slate-800 mb-6">
                       Pošaljite poruku
                     </h2>
-                    
+
                     <form className="space-y-6">
                       <div className="grid md:grid-cols-2 gap-4">
                         <div>
@@ -268,7 +280,8 @@ const ContactPage = () => {
                 Spremni da napravite prvi korak?
               </h2>
               <p className="text-lg text-slate-600 mb-8">
-                Ako čekate da bolji život dođe do vas to se neće desiti bez vas.<br />
+                Ako čekate da bolji život dođe do vas to se neće desiti bez vas.
+                <br />
                 Kreirajte svoj život po svojoj meri.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
