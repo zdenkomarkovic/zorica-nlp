@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import Logo from "../public/logo.png";
+import Logo from "../public/android-chrome-192x192.png";
 import Link from "next/link";
 import { MenuIcon, PhoneIcon } from "lucide-react";
 
