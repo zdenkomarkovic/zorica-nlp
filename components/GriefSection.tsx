@@ -67,19 +67,18 @@ const GriefSection = () => {
             <p className="py-6 md:py-10 text-center text-2xl font-bold text-primary">
               Koji još gubici mogu da uzrokuju tugu:
             </p>
-            <div className="mb-6 flex flex-col md:flex-row items-center gap-6 md:gap-20 mx-auto justify-center">
+            <div className="mb-6 grid md:grid-cols-2 items-center gap-6 md:gap-20 mx-auto justify-center">
               <motion.ul
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.2 }}
-                className="list-disc list-inside font-bold space-y-3"
+                className="list-disc list-inside font-bold space-y-3 pl-20"
               >
                 <li className="">Smrt kućnog ljubimca</li>
                 <li className="">Preseljenje</li>
                 <li className="">Polazak u školu</li>
-                <li className="">Polazak u školu</li>
                 <li className="">Ulazak u brak</li>
-                <li className="">Diplomiranje</li>
+                <li className="">Odlaganje diplomiranja</li>
                 <li className="">Bolest</li>
                 <li className="">Penzionisanje</li>
                 <li className="">Finansijske promene</li>
@@ -92,7 +91,7 @@ const GriefSection = () => {
                   width={500}
                   height={500}
                   alt="logoterapija"
-                  className="w-full object-cover rounded-2xl"
+                  className="w-full object-cover rounded-2xl aspect-[5/6]"
                 />
               </div>
             </div>
