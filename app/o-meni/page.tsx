@@ -94,7 +94,6 @@ const AboutPage = () => {
               transition={{ duration: 0.8 }}
               viewport={{ once: true }}
             >
-            >
               Sertifikovani sam NLP kouč i logoterapeut. Sa ispravnim
               informacijama i ispravnim izborima čovek može da se oporavi od
               svakog velikog gubitka. Put oporavka nije lak. Ono što je najviše
@@ -118,26 +117,24 @@ const AboutPage = () => {
             >
               Znanja i veštine
             </motion.h2>
-<div className="grid md:grid-cols-2 gap-6 md:gap-20">
-
-
-            <motion.div
-              className="grid  gap-4"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
-            >
-              {qualifications.map((qualification, index) => (
-                <Badge
-                key={index}
-                variant="secondary"
-                className="p-4 text-center text-sm"
-                >
-                  <Award className="w-4 h-4 mr-2" />
-                  {qualification}
-                </Badge>
-              ))}
-            </motion.div>
+            <div className="grid md:grid-cols-2 gap-6 md:gap-20">
+              <motion.div
+                className="grid  gap-4"
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 0.2 }}
+              >
+                {qualifications.map((qualification, index) => (
+                  <Badge
+                    key={index}
+                    variant="secondary"
+                    className="p-4 text-center text-sm"
+                  >
+                    <Award className="w-4 h-4 mr-2" />
+                    {qualification}
+                  </Badge>
+                ))}
+              </motion.div>
               <VideoCard video={"/scenario-iii-rfg-metod-1_wTrnzlsc.mp4"} />
             </div>
           </div>
