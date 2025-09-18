@@ -1,21 +1,12 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Mail, Award, Users } from "lucide-react";
+import { Award } from "lucide-react";
 import Image from "@/node_modules/next/image";
 import VideoCard from "@/components/VideoCard";
 
 const AboutPage = () => {
-  const personalInfo = {
-    name: "Zorica Odavić",
-    birthDate: "20.8.1972. godine u Lazarevcu",
-    emails: ["odavic.zorica@gmail.com", "lekovitikoucing@gmail.com"],
-    description:
-      "Oduvek sam se interesovala kako emocije funkcionišu. Sertifikovani sam NLP kouč i logoterapeut. Sa ispravnim informacijama i ispravnim izborima čovek može da se oporavi od svakog velikog gubitka. Put oporavka nije lak. Ono što je najviše inspiriše je da učestvuje u transformaciji ljudskih života, pomažući im da osveste kako žive svoj život i kako da se vrate sebi.",
-  };
-
   const qualifications = [
     "NLP Practitioner",
     "NLP Master",
