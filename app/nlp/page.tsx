@@ -6,22 +6,19 @@ import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import { Brain, Target, Users, CheckCircle } from "lucide-react";
 import Image from "next/image";
+import TrainingSection from "@/components/TrainingSection";
+
 
 const NLPPage = () => {
   const applications = [
     "Poslovanje",
-    "Preduzetništvo", 
-    "Pravosuđe",
     "Obrazovanje",
-    "Organizacija državne uprave",
-    "Očuvanje zdravlja i lečenje",
-    "Psihoterapija",
-    "Vojska",
-    "Policija",
     "Sport",
+    "Međuljudski odnosi",
+    "Preduzetništvo", 
     "Partnerski odnosi",
     "Roditeljstvo",
-    "Bilo koji međuljudski odnosi"
+    "Očuvanje zdravlja",
   ];
 
   return (
@@ -142,6 +139,7 @@ const NLPPage = () => {
       </section>
 
       {/* Prednosti */}
+    <TrainingSection />
            {/* CTA */}
            <section className="py-10 bg-gradient-to-br from-gray-900 to-gray-600">
         <div className="container mx-auto px-4">
@@ -179,7 +177,7 @@ const NLPPage = () => {
             </motion.h2>
 
             <motion.div
-              className="grid md:grid-cols-2 lg:grid-cols-3 gap-4"
+              className="grid md:grid-cols-2 lg:grid-cols-4 gap-4"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
