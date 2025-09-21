@@ -6,6 +6,7 @@ import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import { BookOpen, Heart, Target } from "lucide-react";
 import Image from "next/image";
+import CTA from "@/components/CTA";
 const services = [
   "Oporavak od tuge",
   "Da pronađete smisao u životu",
@@ -150,9 +151,9 @@ const LogotherapyPage = () => {
       </section>
 
       {/* Principi */}
-
+      <CTA phoneNumber="+381644557080" email="lekovitikoucing@gmail.com" />
       {/* CTA */}
-      <section className="py-10 bg-gradient-to-br from-gray-900 to-gray-600">
+      {/* <section className="py-10 bg-gradient-to-br from-gray-900 to-gray-600">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
             <motion.div
@@ -172,7 +173,7 @@ const LogotherapyPage = () => {
             </motion.div>
           </div>
         </div>
-      </section>
+      </section> */}
       <section className="py-20 bg-white">
         <div className="container mx-auto px-4">
           <div className="max-w-5xl mx-auto">
@@ -208,7 +209,7 @@ const LogotherapyPage = () => {
           </div>
         </div>
       </section>
-      <section className="py-16 bg-gradient-to-br from-gray-400 to-gray-100">
+      <section className="py-16 bg-gradient-to-br from-gray-300 to-gray-50">
         <motion.div
           className="prose prose-lg container mx-auto px-4 md:px-10 text-black space-y-4"
           initial={{ opacity: 0, y: 30 }}

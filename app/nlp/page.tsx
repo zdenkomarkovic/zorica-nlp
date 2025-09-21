@@ -7,7 +7,7 @@ import Link from "next/link";
 import { Brain, Target, Users, CheckCircle } from "lucide-react";
 import Image from "next/image";
 import TrainingSection from "@/components/TrainingSection";
-
+import CTA from "@/components/CTA";
 
 const NLPPage = () => {
   const applications = [
@@ -15,7 +15,7 @@ const NLPPage = () => {
     "Obrazovanje",
     "Sport",
     "Međuljudski odnosi",
-    "Preduzetništvo", 
+    "Preduzetništvo",
     "Partnerski odnosi",
     "Roditeljstvo",
     "Očuvanje zdravlja",
@@ -25,8 +25,13 @@ const NLPPage = () => {
     <div className="min-h-screen ">
       {/* Hero sekcija */}
       <section className=" relative h-[70dvh]">
-      <Image src="/nlp.jpg" alt="nlp" fill className="w-full h-full object-cover  -z-10" />
-      <div className="absolute inset-0 bg-black opacity-50 -z-10"></div>
+        <Image
+          src="/nlp.jpg"
+          alt="nlp"
+          fill
+          className="w-full h-full object-cover  -z-10"
+        />
+        <div className="absolute inset-0 bg-black opacity-50 -z-10"></div>
         <div className="container mx-auto px-4 h-full">
           <div className="max-w-4xl mx-auto text-center flex flex-col justify-center items-center z-10 h-full">
             <motion.h1
@@ -61,17 +66,21 @@ const NLPPage = () => {
               viewport={{ once: true }}
             >
               <p className="mb-6 first-letter:pl-6">
-                <span className="font-bold">NLP</span> je skup znanja o ljudima i međuljudskim odnosima, pretočen u skup tehnika, 
-                koje mogu pomoći čoveku da živi život sa više uvida, više izbora i manje slučajnosti.
+                <span className="font-bold">NLP</span> je skup znanja o ljudima
+                i međuljudskim odnosima, pretočen u skup tehnika, koje mogu
+                pomoći čoveku da živi život sa više uvida, više izbora i manje
+                slučajnosti.
               </p>
 
               <p className="mb-6 first-letter:pl-6">
-                <span className="font-bold">NLP</span> je skup alata koji nam obezbeđuju da životni događaji budu manje stvar slučajnosti i
+                <span className="font-bold">NLP</span> je skup alata koji nam
+                obezbeđuju da životni događaji budu manje stvar slučajnosti i
                 sudbine, a više naše svesne namere.
               </p>
 
               <p className="mb-6 first-letter:pl-6 ">
-                <span className="font-bold">NLP</span> je skup proverenih modela za postizanje ciljeva i rešavanje problema.
+                <span className="font-bold">NLP</span> je skup proverenih modela
+                za postizanje ciljeva i rešavanje problema.
               </p>
             </motion.div>
           </div>
@@ -94,9 +103,12 @@ const NLPPage = () => {
                 <Card className="h-full text-center bg-gradient-to-br from-gray-400 to-gray-100">
                   <CardContent className="p-8">
                     <Brain className="w-12 h-12 text-primary mx-auto mb-4" />
-                    <h3 className="text-xl font-semibold mb-4 text-black">Dostupno svima</h3>
+                    <h3 className="text-xl font-semibold mb-4 text-black">
+                      Dostupno svima
+                    </h3>
                     <p className="text-black">
-                      NLP može biti koristan svima, bez obzira na prethodno obrazovanje i iskustvo.
+                      NLP može biti koristan svima, bez obzira na prethodno
+                      obrazovanje i iskustvo.
                     </p>
                   </CardContent>
                 </Card>
@@ -110,9 +122,12 @@ const NLPPage = () => {
                 <Card className="h-full text-center bg-gradient-to-br from-gray-400 to-gray-100">
                   <CardContent className="p-8">
                     <Target className="w-12 h-12 text-primary mx-auto mb-4" />
-                    <h3 className="text-xl font-semibold mb-4 text-black">Univerzalno primenljiv</h3>
+                    <h3 className="text-xl font-semibold mb-4 text-black">
+                      Univerzalno primenljiv
+                    </h3>
                     <p className="text-black">
-                      Koristan i primenljiv kako u poslu, tako i u privatnom životu.
+                      Koristan i primenljiv kako u poslu, tako i u privatnom
+                      životu.
                     </p>
                   </CardContent>
                 </Card>
@@ -126,9 +141,12 @@ const NLPPage = () => {
                 <Card className="h-full text-center bg-gradient-to-br from-gray-400 to-gray-100">
                   <CardContent className="p-8">
                     <Users className="w-12 h-12 text-primary mx-auto mb-4" />
-                    <h3 className="text-xl font-semibold mb-4 text-black">Široko korišćen</h3>
+                    <h3 className="text-xl font-semibold mb-4 text-black">
+                      Široko korišćen
+                    </h3>
                     <p className="text-black">
-                      Više od milion ljudi širom sveta danas koristi NLP u različitim područjima.
+                      Više od milion ljudi širom sveta danas koristi NLP u
+                      različitim područjima.
                     </p>
                   </CardContent>
                 </Card>
@@ -139,9 +157,9 @@ const NLPPage = () => {
       </section>
 
       {/* Prednosti */}
-    <TrainingSection />
-           {/* CTA */}
-           <section className="py-10 bg-gradient-to-br from-gray-900 to-gray-600">
+      <TrainingSection />
+      {/* CTA */}
+      {/* <section className="py-10 bg-gradient-to-br from-gray-900 to-gray-600">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
             <motion.div
@@ -161,8 +179,8 @@ const NLPPage = () => {
             </motion.div>
           </div>
         </div>
-      </section>
-
+      </section> */}
+      <CTA phoneNumber="+381644557080" email="lekovitikoucing@gmail.com" />
       {/* Primene */}
       <section className="py-10 bg-white">
         <div className="container mx-auto px-4">
@@ -183,7 +201,10 @@ const NLPPage = () => {
               transition={{ duration: 0.8, delay: 0.2 }}
             >
               {applications.map((application, index) => (
-                <div key={index} className="flex items-center p-4 bg-gradient-to-br from-gray-400 to-gray-100 rounded-lg">
+                <div
+                  key={index}
+                  className="flex items-center p-4 bg-gradient-to-br from-gray-400 to-gray-100 rounded-lg"
+                >
                   <CheckCircle className="w-5 h-5 text-primary mr-3 flex-shrink-0" />
                   <span className="text-black">{application}</span>
                 </div>
@@ -192,8 +213,6 @@ const NLPPage = () => {
           </div>
         </div>
       </section>
-
-
     </div>
   );
 };

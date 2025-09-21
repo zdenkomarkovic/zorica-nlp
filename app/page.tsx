@@ -12,7 +12,7 @@ export default function Home() {
       <Hero {...heroData} />
       <RFGMethod />
       <GriefSection />
-      <CTA />
+      <CTA phoneNumber="+381644557080" email="lekovitikoucing@gmail.com" />
       <Statistics />
       <Testimonials />
     </div>

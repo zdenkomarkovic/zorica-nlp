@@ -3,18 +3,15 @@
 import { motion } from "framer-motion";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
-import { Label } from "@/components/ui/label";
-import { Mail, Phone, MapPin, Clock, Send, CheckCircle } from "lucide-react";
+import { Mail, Phone, MapPin, CheckCircle, Instagram } from "lucide-react";
 import Image from "@/node_modules/next/image";
 
 const ContactPage = () => {
   const contactInfo = {
     emails: ["odavic.zorica@gmail.com", "lekovitikoucing@gmail.com"],
-    phone: "+381 60 000 000",
+    phone: "+381644557080",
     location: "Lazarevac, Srbija",
-    workingHours: "Pon-Pet: 9:00-17:00, Sub: 9:00-13:00",
+    Instagram: "Zorica Odavić",
   };
 
   const services = [
@@ -63,7 +60,7 @@ const ContactPage = () => {
       <section className="py-20 bg-white">
         <div className="container mx-auto px-4">
           <div className="max-w-6xl mx-auto">
-            <div className="grid lg:grid-cols-2 gap-12">
+            <div className="grid lg:grid-cols-2 gap-12 items-start">
               {/* Kontakt informacije */}
               <motion.div
                 initial={{ opacity: 0, x: -30 }}
@@ -71,7 +68,7 @@ const ContactPage = () => {
                 transition={{ duration: 0.8 }}
                 viewport={{ once: true }}
               >
-                <h2 className="text-3xl font-bold text-slate-800 mb-8">
+                <h2 className="text-3xl font-bold text-slate-800 mb-10">
                   Kontakt informacije
                 </h2>
 
@@ -126,16 +123,18 @@ const ContactPage = () => {
                       </div>
                     </CardContent>
                   </Card>
-
                   <Card>
                     <CardContent className="p-6">
                       <div className="flex items-center">
-                        <Clock className="w-6 h-6 text-primary mr-4" />
+                        <Instagram className="w-6 h-6 text-primary mr-4" />
                         <div>
-                          <h3 className="font-semibold mb-2">Radno vreme</h3>
-                          <p className="text-slate-600">
-                            {contactInfo.workingHours}
-                          </p>
+                          <h3 className="font-semibold mb-2">Instagram</h3>
+                          <a
+                            href="https://www.instagram.com/zodavic/"
+                            className="text-slate-600 hover:text-primary"
+                          >
+                            {contactInfo.Instagram}
+                          </a>
                         </div>
                       </div>
                     </CardContent>
@@ -144,7 +143,7 @@ const ContactPage = () => {
               </motion.div>
 
               {/* Kontakt forma */}
-              <motion.div
+              {/* <motion.div
                 initial={{ opacity: 0, x: 30 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.8 }}
@@ -229,46 +228,46 @@ const ContactPage = () => {
                     </form>
                   </CardContent>
                 </Card>
-              </motion.div>
+              </motion.div> */}
+              <section className="">
+                <div className="container mx-auto px-4">
+                  <div className="max-w-4xl mx-auto">
+                    <motion.h2
+                      className="text-3xl font-bold text-center text-slate-800 mb-12"
+                      initial={{ opacity: 0, y: 30 }}
+                      whileInView={{ opacity: 1, y: 0 }}
+                      transition={{ duration: 0.8 }}
+                    >
+                      Usluge koje pružam
+                    </motion.h2>
+
+                    <motion.div
+                      className="grid md:grid-cols-2 gap-5 md:gap-8"
+                      initial={{ opacity: 0, y: 30 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      transition={{ duration: 0.8, delay: 0.2 }}
+                    >
+                      {services.map((service, index) => (
+                        <Card key={index}>
+                          <CardContent className="p-9 text-center">
+                            <CheckCircle className="w-8 h-8 text-primary mx-auto mb-4" />
+                            <h3 className="font-semibold text-lg">{service}</h3>
+                          </CardContent>
+                        </Card>
+                      ))}
+                    </motion.div>
+                  </div>
+                </div>
+              </section>
             </div>
           </div>
         </div>
       </section>
 
       {/* Usluge */}
-      <section className="py-20 bg-slate-50">
-        <div className="container mx-auto px-4">
-          <div className="max-w-4xl mx-auto">
-            <motion.h2
-              className="text-3xl font-bold text-center text-slate-800 mb-12"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-            >
-              Usluge koje pružam
-            </motion.h2>
-
-            <motion.div
-              className="grid md:grid-cols-2 lg:grid-cols-3 gap-6"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
-            >
-              {services.map((service, index) => (
-                <Card key={index}>
-                  <CardContent className="p-6 text-center">
-                    <CheckCircle className="w-8 h-8 text-primary mx-auto mb-4" />
-                    <h3 className="font-semibold text-lg">{service}</h3>
-                  </CardContent>
-                </Card>
-              ))}
-            </motion.div>
-          </div>
-        </div>
-      </section>
 
       {/* CTA sekcija */}
-      <section className="py-20 bg-white">
+      <section className="py-20 bg-gradient-to-br from-gray-300 to-gray-50 ">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
             <motion.div
@@ -286,13 +285,13 @@ const ContactPage = () => {
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Button asChild size="lg">
-                  <a href="tel:+38160000000">
+                  <a href="tel:+381644557080">
                     <Phone className="w-5 h-5 mr-2" />
                     Pozovite odmah
                   </a>
                 </Button>
                 <Button asChild variant="outline" size="lg">
-                  <a href="mailto:odavic.zorica@gmail.com">
+                  <a href="mailto:lekovitikoucing@gmail.com">
                     <Mail className="w-5 h-5 mr-2" />
                     Pošaljite email
                   </a>

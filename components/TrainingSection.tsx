@@ -2,8 +2,8 @@
 
 import { motion } from "framer-motion";
 import { Card, CardContent } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
-import { CheckCircle, Users, Award, Target, Clock, Star } from "lucide-react";
+import { CheckCircle, Award, Target, Clock, Star } from "lucide-react";
+import { type LucideIcon } from "lucide-react";
 
 interface Training {
   id: number;
@@ -11,7 +11,7 @@ interface Training {
   description: string;
   benefits: string[];
   requirements?: string;
-  icon: React.ComponentType<any>;
+  icon: LucideIcon;
   color: string;
   additionalInfo?: {
     description: string[];
@@ -35,10 +35,10 @@ const trainings: Training[] = [
       "Povećaš svoj poslovni uticaj",
       "Poboljšaš svoje zdravlje",
       "Upoznaš kvalitetne ljude",
-      "Dobiješ internacionalni IANLP sertifikat"
+      "Dobiješ internacionalni IANLP sertifikat",
     ],
     icon: Award,
-    color: "from-blue-500 to-blue-600"
+    color: "from-blue-500 to-blue-600",
   },
   {
     id: 2,
@@ -51,11 +51,11 @@ const trainings: Training[] = [
       "Sve one koji imaju javne nastupe i prezentacije",
       "Ljude koji se bave obukama u firmama i organizacijama",
       "Rukovodioce, posebno rukovodioce HR (ljudskih resursa)",
-      "One koji se bave izborom kadrova"
+      "One koji se bave izborom kadrova",
     ],
     requirements: "Uslov za pohađanje NLP mastera je završen NLP Praktičarski.",
     icon: Star,
-    color: ""
+    color: "",
   },
   {
     id: 3,
@@ -65,13 +65,16 @@ const trainings: Training[] = [
       "Korisna radionica za sve koji žele da unaprede posao",
       "Poboljšanje porodičnih odnosa",
       "Očuvanje i unapređenje zdravlja",
-      "Jedinstven prvi modul NLP PRAKTIČARSKE edukacije"
+      "Jedinstven prvi modul NLP PRAKTIČARSKE edukacije",
     ],
     icon: Target,
     color: "from-green-500 to-green-600",
     additionalInfo: {
-      description: ["Radionica ŽIVOTNA RAVNOTEŽA – Posao & Porodica & Zdravlje je posebna celina ali je istovremeno i jedinstven prvi modul NLP PRAKTIČARSKE edukacije.",""]
-    }
+      description: [
+        "Radionica ŽIVOTNA RAVNOTEŽA – Posao & Porodica & Zdravlje je posebna celina ali je istovremeno i jedinstven prvi modul NLP PRAKTIČARSKE edukacije.",
+        "",
+      ],
+    },
   },
   {
     id: 4,
@@ -83,29 +86,20 @@ const trainings: Training[] = [
       "Šta stres čini vašem telu, umu i emocijama – vašem ukupnom zdravlju?",
       "Koliko vam pomaže u poslu i međuljudskim odnosima a koliko vam odmaže?",
       "Kako da prepoznate u kom ste polju stresa i iskoristite to znanje?",
-      "Kako da, kada već nastane, upravljate njime umesto da on upravlja vama?"
+      "Kako da, kada već nastane, upravljate njime umesto da on upravlja vama?",
     ],
     icon: Clock,
     color: "from-red-500 to-red-600",
     additionalInfo: {
-          description: [ "Stres je prirodna fizička i psihička reakcija organizma na stresore, odnosno štetne faktore iz okoline koji zahtevaju prilagođavanje, a koji može biti koristan u kratkim, akutnim situacijama, ali dugotrajan i nekontrolisan stres dovodi do ozbiljnih zdravstvenih problema, oslabljenog imuniteta i narušenog psihičkog stanja. Reakcija tela na stres uključuje otpuštanje hormona koji pripremaju organizam za borbu ili beg, ali ako stresori postanu hronični, ovaj odgovor može postati štetan.", "Stresor je svaki događaj, situacija ili zahtev koji remeti ravnotežu osobe i zahteva prilagođavanje, a može biti veliki životni događaj (kao što je gubitak voljene osobe) ili nešto svakodnevno (kao što je saobraćajna gužva)."]
-   
-    }
-  }
+      description: [
+        "Stres je prirodna fizička i psihička reakcija organizma na stresore, odnosno štetne faktore iz okoline koji zahtevaju prilagođavanje, a koji može biti koristan u kratkim, akutnim situacijama, ali dugotrajan i nekontrolisan stres dovodi do ozbiljnih zdravstvenih problema, oslabljenog imuniteta i narušenog psihičkog stanja. Reakcija tela na stres uključuje otpuštanje hormona koji pripremaju organizam za borbu ili beg, ali ako stresori postanu hronični, ovaj odgovor može postati štetan.",
+        "Stresor je svaki događaj, situacija ili zahtev koji remeti ravnotežu osobe i zahteva prilagođavanje, a može biti veliki životni događaj (kao što je gubitak voljene osobe) ili nešto svakodnevno (kao što je saobraćajna gužva).",
+      ],
+    },
+  },
 ];
 
-const applicationAreas = [
-  "Poslovanje",
-  "Obrazovanje",
-  "Sport",
-  "Međuljudski odnosi",
-  "Preduzetništvo",
-  "Partnerski odnosi",
-  "Roditeljstvo",
-  "Očuvanje zdravlja"
-];
-
-const TrainingSection = ({ className = "" }: TrainingSectionProps) => {
+const TrainingSection = () => {
   return (
     <section className={`py-16 bg-gradient-to-br from-gray-400 to-gray-100`}>
       <div className="container mx-auto px-4 md:px-10">
@@ -138,7 +132,9 @@ const TrainingSection = ({ className = "" }: TrainingSectionProps) => {
                 <Card className="h-full hover:shadow-lg transition-shadow duration-300">
                   <CardContent className="p-8">
                     <div className="flex items-start mb-6">
-                      <div className={`bg-gradient-to-br from-gray-400 to-gray-100  p-3 rounded-full mr-4`}>
+                      <div
+                        className={`bg-gradient-to-br from-gray-400 to-gray-100  p-3 rounded-full mr-4`}
+                      >
                         <training.icon className="w-6 h-6 text-primary" />
                       </div>
                       <div>
@@ -155,29 +151,40 @@ const TrainingSection = ({ className = "" }: TrainingSectionProps) => {
                     {training.additionalInfo && (
                       <div className="mb-6 space-y-4">
                         <div className="bg-slate-50 p-4 rounded-lg">
-                            {training.additionalInfo?.description.map((text, i) =>{
-                         return (
-                        <p key={i} className="text-slate-700 text-sm leading-relaxed">
-                        {text}
-                    </p>
-                      )})}           
+                          {training.additionalInfo?.description.map(
+                            (text, i) => {
+                              return (
+                                <p
+                                  key={i}
+                                  className="text-slate-700 text-sm leading-relaxed"
+                                >
+                                  {text}
+                                </p>
+                              );
+                            }
+                          )}
                         </div>
                       </div>
                     )}
                     <div className="space-y-3 mb-6">
                       <h4 className="font-semibold text-slate-800 mb-3">
-                        {                       
-                         training.id === 1 ? "Zašto NLP Praktičarski?" : ""}
+                        {training.id === 1 ? "Zašto NLP Praktičarski?" : ""}
                       </h4>
                       <h4 className="font-semibold text-slate-800 mb-3">
-                        {training.id === 4 ? "Na jednodnevnoj radionici Upravljanje stresom dobićete odgovore na mnoga pitanja:" : 
-                         training.id === 2 ? "Koristan je za:" : 
-                         training.id === 1 ? "Pomaže ti da:" : "Korisna radionica za sve koji žele da unaprede posao, porodične odnose i zdravlje."}
+                        {training.id === 4
+                          ? "Na jednodnevnoj radionici Upravljanje stresom dobićete odgovore na mnoga pitanja:"
+                          : training.id === 2
+                          ? "Koristan je za:"
+                          : training.id === 1
+                          ? "Pomaže ti da:"
+                          : "Korisna radionica za sve koji žele da unaprede posao, porodične odnose i zdravlje."}
                       </h4>
                       {training.benefits.map((benefit, benefitIndex) => (
                         <div key={benefitIndex} className="flex items-start">
                           <CheckCircle className="w-5 h-5 text-primary mr-3 mt-0.5 flex-shrink-0" />
-                          <span className="text-slate-700 text-sm">{benefit}</span>
+                          <span className="text-slate-700 text-sm">
+                            {benefit}
+                          </span>
                         </div>
                       ))}
                     </div>
@@ -194,7 +201,7 @@ const TrainingSection = ({ className = "" }: TrainingSectionProps) => {
               </motion.div>
             ))}
           </div>
-             {/* Glavni treninzi */}
+          {/* Glavni treninzi */}
           <div className="grid  gap-8">
             {trainings.slice(3, 6).map((training, index) => (
               <motion.div
@@ -207,7 +214,9 @@ const TrainingSection = ({ className = "" }: TrainingSectionProps) => {
                 <Card className="h-full hover:shadow-lg transition-shadow duration-300">
                   <CardContent className="p-8">
                     <div className="flex items-start mb-6">
-                      <div className={`bg-gradient-to-br from-gray-400 to-gray-100  p-3 rounded-full mr-4`}>
+                      <div
+                        className={`bg-gradient-to-br from-gray-400 to-gray-100  p-3 rounded-full mr-4`}
+                      >
                         <training.icon className="w-6 h-6 text-primary" />
                       </div>
                       <div>
@@ -224,35 +233,41 @@ const TrainingSection = ({ className = "" }: TrainingSectionProps) => {
                     {training.additionalInfo && (
                       <div className="mb-6 space-y-4">
                         <div className="bg-slate-50 p-4 rounded-lg">
-                            {training.additionalInfo?.description.map((text, i) =>{
-return (
-  <p key={i} className="text-slate-700 text-sm leading-relaxed">
-    {text}
-  </p>
-)
-
-                            })}
-
-                  
+                          {training.additionalInfo?.description.map(
+                            (text, i) => {
+                              return (
+                                <p
+                                  key={i}
+                                  className="text-slate-700 text-sm leading-relaxed"
+                                >
+                                  {text}
+                                </p>
+                              );
+                            }
+                          )}
                         </div>
-                       
                       </div>
                     )}
 
                     <div className="space-y-3 mb-6">
                       <h4 className="font-semibold text-slate-800 mb-3">
-                        {                       
-                         training.id === 1 ? "Zašto NLP Praktičarski?" : ""}
+                        {training.id === 1 ? "Zašto NLP Praktičarski?" : ""}
                       </h4>
                       <h4 className="font-semibold text-slate-800 mb-3">
-                        {training.id === 4 ? "Na jednodnevnoj radionici Upravljanje stresom dobićete odgovore na mnoga pitanja:" : 
-                         training.id === 2 ? "Koristan je za:" : 
-                         training.id === 1 ? "Pomaže ti da:" : "Korisna radionica za sve koji žele da unaprede posao, porodične odnose i zdravlje."}
+                        {training.id === 4
+                          ? "Na jednodnevnoj radionici Upravljanje stresom dobićete odgovore na mnoga pitanja:"
+                          : training.id === 2
+                          ? "Koristan je za:"
+                          : training.id === 1
+                          ? "Pomaže ti da:"
+                          : "Korisna radionica za sve koji žele da unaprede posao, porodične odnose i zdravlje."}
                       </h4>
                       {training.benefits.map((benefit, benefitIndex) => (
                         <div key={benefitIndex} className="flex items-start">
                           <CheckCircle className="w-5 h-5 text-primary mr-3 mt-0.5 flex-shrink-0" />
-                          <span className="text-slate-700 text-sm">{benefit}</span>
+                          <span className="text-slate-700 text-sm">
+                            {benefit}
+                          </span>
                         </div>
                       ))}
                     </div>

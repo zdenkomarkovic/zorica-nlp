@@ -4,44 +4,75 @@ import { motion } from "framer-motion";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
-import { Users, Target,  CheckCircle} from "lucide-react";
+import { Users, Target, CheckCircle } from "lucide-react";
 import CTA from "@/components/CTA";
 import Image from "next/image";
 
 const CoachingPage = () => {
   const keyElements = [
-   {title: "Partnerski odnos", description: " Kouč i klijent rade zajedno, pri čemu kouč nije autoritet, već vodič i podrška. "},  
-    {title: "Fokus na cilj", description: "Koučing je usmeren na ostvarivanje specifičnih ciljeva i postizanje željenih rezultata, za razliku od opštih ciljeva ili razvoja. "},
-    {title: "Osnaživanje i introspekcija", description: "Klijent se podstiče na dublju introspekciju, kako bi sam pronašao autentična rešenja i strategije za napredak. "},
-    {title: "Veličanje klijentove autonomije", description: "Klijent se podstiče na dublju introspekciju, kako bi sam pronašao autentična rešenja i strategije za napredak. "},
-    {title: "Prevazilaženje blokada", description: "Procesom koučinga, klijent identifikuje i prevazilazi lične prepreke, ograničavajuća uverenja i sabotirajuće faktore. "},
-    {title: "Fokus na budućnost", description: "Procesom koučinga, klijent identifikuje i prevazilazi lične prepreke, ograničavajuća uverenja i sabotirajuće faktore. "}
+    {
+      title: "Partnerski odnos",
+      description:
+        " Kouč i klijent rade zajedno, pri čemu kouč nije autoritet, već vodič i podrška. ",
+    },
+    {
+      title: "Fokus na cilj",
+      description:
+        "Koučing je usmeren na ostvarivanje specifičnih ciljeva i postizanje željenih rezultata, za razliku od opštih ciljeva ili razvoja. ",
+    },
+    {
+      title: "Osnaživanje i introspekcija",
+      description:
+        "Klijent se podstiče na dublju introspekciju, kako bi sam pronašao autentična rešenja i strategije za napredak. ",
+    },
+    {
+      title: "Veličanje klijentove autonomije",
+      description:
+        "Klijent se podstiče na dublju introspekciju, kako bi sam pronašao autentična rešenja i strategije za napredak. ",
+    },
+    {
+      title: "Prevazilaženje blokada",
+      description:
+        "Procesom koučinga, klijent identifikuje i prevazilazi lične prepreke, ograničavajuća uverenja i sabotirajuće faktore. ",
+    },
+    {
+      title: "Fokus na budućnost",
+      description:
+        "Procesom koučinga, klijent identifikuje i prevazilazi lične prepreke, ograničavajuća uverenja i sabotirajuće faktore. ",
+    },
   ];
 
   const faq = [
     {
       question: "Kako funkcioniše coaching?",
-      answer: "Na uvodnom razgovoru definišemo sadašnje i željeno stanje. Potreban broj sesija, koučing prostor, online ili uživo. Moj način rada i tehnike."
+      answer:
+        "Na uvodnom razgovoru definišemo sadašnje i željeno stanje. Potreban broj sesija, koučing prostor, online ili uživo. Moj način rada i tehnike.",
     },
     {
       question: "Da li mi coaching može pomoći?",
-      answer: "Od vas zavisi rezultat. Ako uzmete aktivno učešće sigurno može."
+      answer: "Od vas zavisi rezultat. Ako uzmete aktivno učešće sigurno može.",
     },
     {
       question: "Koliko traje jedna sesija?",
-      answer: "Individualna sesija traje 45 minuta a grupna 90 minuta."
+      answer: "Individualna sesija traje 45 minuta a grupna 90 minuta.",
     },
     {
       question: "Šta ako nisam zadovoljan?",
-      answer: "Ne garantujem vam zadovoljstvo već rast i razvoj. Oni mogu biti i bolni."
-    }
+      answer:
+        "Ne garantujem vam zadovoljstvo već rast i razvoj. Oni mogu biti i bolni.",
+    },
   ];
 
   return (
     <div className="min-h-screen ">
       {/* Hero sekcija */}
       <section className=" relative h-[70dvh]">
-        <Image src="/couching.jpg" alt="Koučing" fill className="w-full h-full object-cover  [object-position:50%_20%] -z-10" />
+        <Image
+          src="/couching.jpg"
+          alt="Koučing"
+          fill
+          className="w-full h-full object-cover  [object-position:50%_20%] -z-10"
+        />
         <div className="absolute inset-0 bg-black opacity-50 -z-10"></div>
         <div className="container mx-auto px-4 h-full">
           <div className="max-w-4xl mx-auto text-center flex flex-col justify-center items-center z-10 h-full">
@@ -77,14 +108,18 @@ const CoachingPage = () => {
               viewport={{ once: true }}
             >
               <p className="mb-6 first-letter:pl-6 ">
-                Koučing je partnerski odnos između kouča (pomoćnika) i klijenta (osobe koja se razvija) u
-                kojem kouč podržava klijenta u postizanju ličnih ili profesionalnih ciljeva kroz postavljanje
-                pitanja, aktivno slušanje i vođenje ka pronalasku sopstvenih rešenja.
+                Koučing je partnerski odnos između kouča (pomoćnika) i klijenta
+                (osobe koja se razvija) u kojem kouč podržava klijenta u
+                postizanju ličnih ili profesionalnih ciljeva kroz postavljanje
+                pitanja, aktivno slušanje i vođenje ka pronalasku sopstvenih
+                rešenja.
               </p>
 
               <p className="mb-6 first-letter:pl-6 ">
-                Cilj koučinga je da klijent osnaži svoj potencijal, razvije veštine i prevaziđe prepreke, 
-                ne dajući gotove savete već podstičući klijenta da sam dođe do najadekvatnijih akcija i rezultata.
+                Cilj koučinga je da klijent osnaži svoj potencijal, razvije
+                veštine i prevaziđe prepreke, ne dajući gotove savete već
+                podstičući klijenta da sam dođe do najadekvatnijih akcija i
+                rezultata.
               </p>
             </motion.div>
           </div>
@@ -105,13 +140,16 @@ const CoachingPage = () => {
               transition={{ duration: 0.8, delay: 0.2 }}
             >
               {keyElements.map((element, index) => (
-                <Card key={index} className="bg-gradient-to-br from-gray-400 to-gray-100">
+                <Card
+                  key={index}
+                  className="bg-gradient-to-br from-gray-400 to-gray-100"
+                >
                   <CardContent className="p-6 ">
                     <div className="flex items-center mb-4">
                       <CheckCircle className="w-6 h-6 mr-3 text-primary" />
                       <p className=" font-medium">{element.title}</p>
                     </div>
-                      <p className="text-lg text-black">{element.description}</p>
+                    <p className="text-lg text-black">{element.description}</p>
                   </CardContent>
                 </Card>
               ))}
@@ -120,8 +158,8 @@ const CoachingPage = () => {
         </div>
       </section>
 
-      <CTA phoneNumber="+381 60 000 000" email="odavic.zorica@gmail.com"  />
-   
+      <CTA phoneNumber="+381644557080" email="lekovitikoucing@gmail.com" />
+
       {/* FAQ */}
       <section className="py-10 bg-white ">
         <div className="container mx-auto px-4">
@@ -145,8 +183,12 @@ const CoachingPage = () => {
                 >
                   <Card className="bg-gradient-to-br from-gray-400 to-gray-100">
                     <CardContent className="p-6">
-                      <h3 className="text-xl font-semibold mb-3 text-black">{item.question}</h3>
-                      <p className="text-black text-lg text-center">{item.answer}</p>
+                      <h3 className="text-xl font-semibold mb-3 text-black">
+                        {item.question}
+                      </h3>
+                      <p className="text-black text-lg text-center">
+                        {item.answer}
+                      </p>
                     </CardContent>
                   </Card>
                 </motion.div>
@@ -177,7 +219,7 @@ const CoachingPage = () => {
                 <Card className="h-full">
                   <CardContent className="p-8 text-center">
                     <Users className="w-10 h-10 text-primary mx-auto mb-4" />
-                  
+
                     <p className="text-slate-600 ">Grupni koučing: 25€ </p>
                   </CardContent>
                 </Card>
@@ -190,8 +232,10 @@ const CoachingPage = () => {
               >
                 <Card className="h-full">
                   <CardContent className="p-8 text-center">
-                          <Target className="w-10 h-10 text-primary mx-auto mb-4" />
-                            <p className="  text-slate-600">Individualni koučing: 50-100 €</p>
+                    <Target className="w-10 h-10 text-primary mx-auto mb-4" />
+                    <p className="  text-slate-600">
+                      Individualni koučing: 50-100 €
+                    </p>
                   </CardContent>
                 </Card>
               </motion.div>
