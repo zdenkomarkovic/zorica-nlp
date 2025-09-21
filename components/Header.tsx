@@ -103,7 +103,7 @@ export default function Header() {
           </p>
         </Link>
         <DesktopNav />
-        <Link href="tel:+3816">
+        <Link href="tel:+381644557080">
           <motion.button
             whileHover={{
               color: "hsl(var(--foreground))",
@@ -112,7 +112,7 @@ export default function Header() {
             className=" items-center justify-center rounded-full text-primary border-primary border-2 text-sm md:text-lg py-1 px-2 md:py-2 md:px-4 transition-colors flex"
           >
             <PhoneIcon className="hidden md:block" />
-            <p className="">+38160 000 000</p>
+            <p className="">+38164 455 7080</p>
           </motion.button>
         </Link>
         <MobileMenu />
