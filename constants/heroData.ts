@@ -9,12 +9,4 @@ export const heroData = {
     author: "Viktor Frankl",
     text2: "Pronaći smisao i kada ga nema.",
   },
-  primaryAction: {
-    label: "Kontaktirajte me",
-    href: "/kontakt",
-  },
-  secondaryAction: {
-    label: "Saznajte vise",
-    href: "/o-meni",
-  },
 };

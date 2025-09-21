@@ -2,8 +2,7 @@
 
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
-import Link from "next/link";
-import { Quote } from "lucide-react";
+import { Phone, Mail, Quote } from "lucide-react";
 import Image from "next/image";
 interface HeroProps {
   title: string;
@@ -14,27 +13,17 @@ interface HeroProps {
     author: string;
     text2: string;
   };
-  primaryAction: {
-    label: string;
-    href: string;
-  };
-  secondaryAction: {
-    label: string;
-    href: string;
-  };
 }
 
-const Hero = ({
-  title,
-  subtitle,
-  description,
-  quote,
-  primaryAction,
-  secondaryAction,
-}: HeroProps) => {
+const Hero = ({ title, subtitle, description, quote }: HeroProps) => {
   return (
     <section className="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-slate-50 to-slate-100">
-      <Image src="/hero.jpg" alt="Hero Background" fill className="object-cover " />
+      <Image
+        src="/hero.jpg"
+        alt="Hero Background"
+        fill
+        className="object-cover "
+      />
       <div className="absolute inset-0 bg-black opacity-60"></div>
       <div className="container mx-auto px-4 py-20 relative z-0 text-white">
         <div className="text-center max-w-4xl mx-auto">
@@ -54,9 +43,7 @@ const Hero = ({
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
           >
-            <p className="mb-4">
-              {subtitle}
-            </p>
+            <p className="mb-4">{subtitle}</p>
           </motion.div>
 
           <motion.blockquote
@@ -66,7 +53,9 @@ const Hero = ({
             transition={{ duration: 0.8, delay: 0.4 }}
           >
             <Quote className="inline w-4 h-4 mr-2 text-primary mb-3" />
-        {quote.text} <Quote className="inline w-4 h-4 mr-2 text-primary mb-3" /> - {quote.author} <br />
+            {quote.text}{" "}
+            <Quote className="inline w-4 h-4 mr-2 text-primary mb-3" /> -{" "}
+            {quote.author} <br />
             {quote.text2}
           </motion.blockquote>
 
@@ -76,11 +65,23 @@ const Hero = ({
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.6 }}
           >
-            <Button asChild size="lg" className="text-lg px-8 py-6">
-              <Link href={primaryAction.href}>{primaryAction.label}</Link>
+            <Button asChild size="lg" className="text-lg px-8 py-6 ">
+              <a href="tel:+381644557080">
+                <Phone className="w-5 h-5 mr-2" />
+                Pozovite odmah
+              </a>
             </Button>
-            <Button asChild variant="outline" size="lg" className="text-lg px-8 py-6 text-gray-700">
-              <Link href={secondaryAction.href}>{secondaryAction.label}</Link>
+
+            <Button
+              asChild
+              variant="outline"
+              size="lg"
+              className="text-lg px-8 py-6 text-gray-700"
+            >
+              <a href="mailto:lekovitikoucing@gmail.com">
+                <Mail className="w-5 h-5 mr-2" />
+                Pošaljite email
+              </a>
             </Button>
           </motion.div>
         </div>
