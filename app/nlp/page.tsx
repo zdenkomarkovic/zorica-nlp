@@ -2,8 +2,6 @@
 
 import { motion } from "framer-motion";
 import { Card, CardContent } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
-import Link from "next/link";
 import { Brain, Target, Users, CheckCircle } from "lucide-react";
 import Image from "next/image";
 import TrainingSection from "@/components/TrainingSection";

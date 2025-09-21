@@ -19,10 +19,6 @@ interface Training {
   };
 }
 
-interface TrainingSectionProps {
-  className?: string;
-}
-
 const trainings: Training[] = [
   {
     id: 1,
