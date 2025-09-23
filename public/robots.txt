@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://logoterapeut.rs
+
+# Sitemaps
+Sitemap: https://logoterapeut.rs/sitemap.xml
