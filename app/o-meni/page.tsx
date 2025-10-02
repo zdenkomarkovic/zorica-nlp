@@ -20,11 +20,11 @@ const AboutPage = () => {
   return (
     <div className="min-h-screen">
       {/* Hero sekcija */}
-      <section className="">
-        <div className="container mx-auto px-4 grid md:grid-cols-2 h-[70dvh]">
-          <div className=" text-center px-8 flex flex-col justify-end pb-10 ">
+      <section className=" mt-24 md:mt-0">
+        <div className="container mx-auto px-4 grid md:grid-cols-2 ">
+          <div className=" text-center md:px-8 flex flex-col justify-end pb-6 md:pb-10 ">
             <motion.h1
-              className="text-4xl md:text-6xl  font-bold text-primary mb-10"
+              className="text-4xl md:text-6xl  font-bold text-primary mb-6 md:mb-10"
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
@@ -44,13 +44,13 @@ const AboutPage = () => {
               sposobnost koju svaki čovek može da razvije.
             </motion.p>
           </div>
-          <div className=" h-[70dvh] aspect-square ">
+          <div className=" md:h-[70dvh] aspect-square ">
             <Image
               src={"/zorica.jpg"}
               width={500}
               height={500}
               alt="logoterapija"
-              className="w-full h-full object-cover aspect-square rounded-full p-6 mt-10 "
+              className="w-full h-full object-cover aspect-square rounded-full md:p-6 md:mt-10 "
             />
           </div>
         </div>
@@ -131,8 +131,6 @@ const AboutPage = () => {
           </div>
         </div>
       </section>
-
-      {/* Usluge */}
     </div>
   );
 };

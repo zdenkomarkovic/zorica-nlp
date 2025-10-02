@@ -17,7 +17,7 @@ interface HeroProps {
 
 const Hero = ({ title, subtitle, description, quote }: HeroProps) => {
   return (
-    <section className="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-slate-50 to-slate-100">
+    <section className="relative h-[100dvh] flex items-center justify-center bg-gradient-to-br from-slate-50 to-slate-100">
       <Image
         src="/hero.jpg"
         alt="Hero Background"
